@@ -108,7 +108,7 @@ INSERT [dbo].[KyLuat_CanBo] ([MaKL], [MaCB], [NgayQuyetDinh]) VALUES (3, 6, CAST
 	JOIN DonVi dv ON cb.MaDV = dv.MaDV
 	WHERE lkt.LoaiKhenThuong = N'Chiến sĩ thi đua';
 
-	--4.Đoạn code để xuất thông tin đề nghị kỷ luật với tên chỉ huy đơn vị là “Vũ Xuân An”, chức vụ: “Đại đội trưởng”, cấp bậc: “Thiếu tá”, Đơn vị: “Đại đội 157”, xét kỷ luật đồng chí : “Mạch Duy Hùng”, chức vụ: “Phó Đại đội trưởng”, cấp bậc: “Trung úy”, Đơn vị: “Đại đội 157”, Lí do: “vắng mặt trái phép”, đề nghị hình thức kỷ luật: “khiển trách”
+	--4.Đoạn code để xuất thông tin đề nghị kỷ luật với tên chỉ huy đơn vị là “Vũ Xuân An”, chức vụ: “Đại đội trưởng”, cấp bậc: “Đại úy”, Đơn vị: “Đại đội 157”, xét kỷ luật đồng chí : “Mạch Duy Hùng”, chức vụ: “Phó Đại đội trưởng”, cấp bậc: “Trung úy”, Đơn vị: “Đại đội 157”, Lí do: “vắng mặt trái phép”, đề nghị hình thức kỷ luật: “khiển trách”
 
 		SELECT
 			-- Người đề nghị
