@@ -686,17 +686,22 @@ CREATE TABLE DangPhi (
 INSERT INTO Role (roleName) VALUES (N'ADMIN'), (N'PhongDaoTao'), (N'GiangVien');
 INSERT INTO [User] (Username, Email, Password, FullName, UserType, NoiDungEmail)
  VALUES ('admin1', null, N'$2b$10$CkBKz1CiMntvIe3XjVvJ8Or63odPg5dKo5Wi0QFHdaTimZXBaFhsa',N'Vu Cong Thieu',N'Giang Vien', null);
+INSERT INTO Role_User (UserId, roleId, isActive ) VALUES (1,1,1);
+SET IDENTITY_INSERT [dbo].[User] ON 
 INSERT [dbo].[User] ([UserId], [Username], [Email], [Password], [createDate], [FullName], [UserType], [NoiDungEmail]) VALUES (2, N'p1', N'p1@mta.edu.vn', N'$2b$08$9yPb/wNhqhbR1aN9dqFzM.ah7qitmMvT.PK83eaUTiRiKlJbIZWRG', CAST(N'2025-06-30T06:41:02.170' AS DateTime), N'p1', NULL, NULL)
 INSERT [dbo].[User] ([UserId], [Username], [Email], [Password], [createDate], [FullName], [UserType], [NoiDungEmail]) VALUES (3, N'p2', N'p2@mta.edu.vn', N'$2b$08$U0IGSOhzN4GQhTAJ5RN9GOJ1m/sHnBBrRX4E7kKNvoIZEtCM2RE2m', CAST(N'2025-06-30T06:41:27.163' AS DateTime), N'Phòng đào tạo', NULL, NULL)
 INSERT [dbo].[User] ([UserId], [Username], [Email], [Password], [createDate], [FullName], [UserType], [NoiDungEmail]) VALUES (4, N'd1', N'd1@mta.edu.vn', N'$2b$08$RCZvNez.6.ZwvQgpmOoove5DdP73xu74XCnpygzP3VGKe3YCG2as2', CAST(N'2025-06-30T06:41:44.920' AS DateTime), N'Tiểu đoàn 1', NULL, NULL)
 INSERT [dbo].[User] ([UserId], [Username], [Email], [Password], [createDate], [FullName], [UserType], [NoiDungEmail]) VALUES (5, N'd2', N'd2@mta.edu.vn', N'$2b$08$CwRqq/wCI4EjhdvKTLP/B.nbYr99ykkCBqBNaaUsNIy9.3THldpn6', CAST(N'2025-06-30T06:41:59.803' AS DateTime), N'Tiểu đoàn 2', NULL, NULL)
 INSERT [dbo].[User] ([UserId], [Username], [Email], [Password], [createDate], [FullName], [UserType], [NoiDungEmail]) VALUES (6, N'c157', N'c157@mta.edu.vn', N'$2b$08$cbOU6GLFtzcXJqGJ6tDTa.qrnXwcYShzymIU7VaI2uoIo3QiPkv5.', CAST(N'2025-06-30T06:42:24.097' AS DateTime), N'Đại đội 157', NULL, NULL)
-INSERT INTO Role_User (UserId, roleId, isActive ) VALUES (1,1,1);
+SET IDENTITY_INSERT [dbo].[User] OFF
+GO
 INSERT [dbo].[Role_User] ([UserId], [roleId], [isActive]) VALUES (2, 1, 1)
 INSERT [dbo].[Role_User] ([UserId], [roleId], [isActive]) VALUES (3, 1, 1)
 INSERT [dbo].[Role_User] ([UserId], [roleId], [isActive]) VALUES (4, 1, 1)
 INSERT [dbo].[Role_User] ([UserId], [roleId], [isActive]) VALUES (5, 1, 1)
 INSERT [dbo].[Role_User] ([UserId], [roleId], [isActive]) VALUES (6, 1, 1)
+GO
+
 ----------------------------------- END CHUNG -------------------------
 INSERT INTO DonVi (TenDV) VALUES
 (N'Tiểu đoàn 1'),

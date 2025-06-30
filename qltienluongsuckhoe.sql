@@ -143,13 +143,6 @@ INSERT [dbo].[DanhSachKham] ([MaDSK], [TrangThaiThamGia], [NgayDangKy], [GhiChu]
 PRINT N'=== HOÀN THÀNH THÊM DỮ LIỆU ===';
 
 
-
-PRINT N'';
-PRINT N'===============================================================';
-PRINT N'=== CÁC QUERY MẪU BIỂU ===';
-PRINT N'===============================================================';
-
--- 22. QUERY 1: MẪU BIỂU QUYẾT ĐỊNH TĂNG LƯƠNG CHO CÁN BỘ THĂNG QUÂN HÀM
 PRINT N'';
 PRINT N'1. MẪU BIỂU QUYẾT ĐỊNH TĂNG LƯƠNG CHO CÁN BỘ THĂNG QUÂN HÀM (MaCB = 1):';
 SELECT 
@@ -163,9 +156,9 @@ SELECT
 FROM CanBo CB
 INNER JOIN DonVi DV ON CB.MaDV = DV.MaDV
 INNER JOIN BangLuong BL ON CB.MaCB = BL.MaCB
-INNER JOIN MucLuongCapBac ML ON CB.CapBac = ML.CapBac AND BL.LuongCoBan = ML.LuongCoBan
+INNER JOIN MucLuongCapBac ML ON CB.CapBac = ML.CapBac 
 WHERE BL.ThangNam = '2025-06' AND CB.MaCB = 1;
-
+go
 -- 23. QUERY 2: MẪU BIỂU DANH SÁCH CÁN BỘ TĂNG GIẢM LƯƠNG
 PRINT N'';
 PRINT N'2. MẪU BIỂU DANH SÁCH CÁN BỘ TĂNG GIẢM LƯƠNG (Đơn vị MaDV = 2, tháng 12/2024):';
@@ -186,9 +179,12 @@ SELECT
 FROM LichSuLuong LSL
 INNER JOIN CanBo CB ON LSL.MaCB = CB.MaCB
 INNER JOIN DonVi DV ON CB.MaDV = DV.MaDV
-WHERE DV.MaDV = 2 AND FORMAT(LSL.NgayThayDoi, 'MM/yyyy') = '12/2024'
+WHERE DV.MaDV = 3 AND FORMAT(LSL.NgayThayDoi, 'MM/yyyy') = '11/2024'
 ORDER BY CB.HoTenKhaiSinh;
+go
 
+
+select * from LichSuLuong
 -- 24. QUERY 3: MẪU BIỂU QUYẾT ĐỊNH KHÁM SỨC KHỎE CHO CÁN BỘ, NHÂN VIÊN
 PRINT N'';
 PRINT N'3. MẪU BIỂU QUYẾT ĐỊNH KHÁM SỨC KHỎE CHO CÁN BỘ, NHÂN VIÊN (MaKHKSK = 1):';
@@ -211,7 +207,7 @@ FROM KeHoachKhamSucKhoe k
 LEFT JOIN DonVi d ON k.MaDV = d.MaDV
 LEFT JOIN CanBo cb ON k.MaNguoiTao = cb.MaCB
 WHERE k.MaKHKSK = 1;
-
+go
 -- 25. QUERY 4: MẪU BIỂU DANH SÁCH CÁN BỘ THAM GIA KHÁM SỨC KHỎE
 PRINT N'';
 PRINT N'4. MẪU BIỂU DANH SÁCH CÁN BỘ THAM GIA KHÁM SỨC KHỎE (MaKHKSK = 1):';
@@ -227,3 +223,4 @@ INNER JOIN CanBo cb ON dsk.MaCB = cb.MaCB
 INNER JOIN DonVi dv ON cb.MaDV = dv.MaDV
 WHERE dsk.MaKHKSK = 1
 ORDER BY dv.TenDV, cb.CapBac, cb.HoTenKhaiSinh;
+go
