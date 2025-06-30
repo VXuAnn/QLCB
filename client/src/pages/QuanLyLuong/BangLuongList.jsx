@@ -77,33 +77,33 @@ const BangLuongList = () => {
     setShowConfirm(false);
   };
 
-  const handleTinhLuong = async () => {
-    if (!filters.thangNam) {
-      toast.error("Vui lòng chọn tháng năm!");
-      return;
-    }
+  // const handleTinhLuong = async () => {
+  //   if (!filters.thangNam) {
+  //     toast.error("Vui lòng chọn tháng năm!");
+  //     return;
+  //   }
 
-    try {
-      const result = await api.tinhLuong({
-        thangNam: filters.thangNam,
-        donViId: filters.donVi || null,
-      });
+  //   try {
+  //     const result = await api.tinhLuong({
+  //       thangNam: filters.thangNam,
+  //       donViId: filters.donVi || null,
+  //     });
 
-      if (result.data?.message) {
-        toast.success(result.data.message);
-      } else {
-        toast.success("Tính lương thành công!");
-      }
-      fetchBangLuong();
-    } catch (err) {
-      console.error("Lỗi tính lương:", err);
-      if (err.response?.data?.message) {
-        toast.error(err.response.data.message);
-      } else {
-        toast.error("Lỗi khi tính lương!");
-      }
-    }
-  };
+  //     if (result.data?.message) {
+  //       toast.success(result.data.message);
+  //     } else {
+  //       toast.success("Tính lương thành công!");
+  //     }
+  //     fetchBangLuong();
+  //   } catch (err) {
+  //     console.error("Lỗi tính lương:", err);
+  //     if (err.response?.data?.message) {
+  //       toast.error(err.response.data.message);
+  //     } else {
+  //       toast.error("Lỗi khi tính lương!");
+  //     }
+  //   }
+  // };
 
   const handleApprove = async (id) => {
     try {
@@ -180,9 +180,9 @@ const BangLuongList = () => {
           QUẢN LÝ BẢNG LƯƠNG CÁN BỘ
         </h1>
         <div className="flex gap-2">
-          <Button className="bg-green-600 text-white" onClick={handleTinhLuong}>
+          {/* <Button className="bg-green-600 text-white" onClick={handleTinhLuong}>
             <Calculator className="w-4 h-4 mr-1" /> Tính lương
-          </Button>
+          </Button> */}
           <Button
             className="bg-blue-600 text-white"
             onClick={() => navigate("/bangluong/form")}

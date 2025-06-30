@@ -53,7 +53,7 @@ VALUES
 (N'Lê Văn Bình', NULL, NULL, N'Nam', N'Thiếu tá', N'Trợ lí', 3, CAST(N'1980-11-02' AS Date), NULL, N'Quảng Nam', N'HCM', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (N'Vũ Xuân An', N'Vũ Xuân An', NULL, N'Nam', N'Đại úy', N'Đại đội trưởng', 3, CAST(N'2003-03-16' AS Date), NULL, N'Ninh Bình', N'Ninh Bình', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (N'Mạch Duy Hùng', N'Mạch Duy Hùng', NULL, N'Nam', N'Trung úy', N'Phó Đại đội trưởng', 3, CAST(N'2004-10-10' AS Date), NULL, N'Ninh Bình', N'Ninh Bình', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(N'Vũ Xuân An', N'Vũ Xuân An', NULL, N'Nam', N'Thượng tá', N'Viện trưởng', 17, CAST(N'1985-03-20' AS Date), NULL, N'Thanh Hóa', N'HCM', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,  NULL),
+(N'Vũ Xuân An', N'Vũ Xuân An', NULL, N'Nam', N'Thượng tá', N'Viện trưởng', 14, CAST(N'1985-03-20' AS Date), NULL, N'Thanh Hóa', N'HCM', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,  NULL),
 (N'Đàm Thùy Dương', N'Đàm Thùy Dương', NULL, N'Nữ', N'Trung úy', N'Phó Đại đội trưởng', 12, CAST(N'2006-06-17' AS Date), NULL, N'Ninh Bình', N'Ninh Bình', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (N'Lê Nguyễn Nhựt Nam', N'Lê Nguyễn Nhựt Nam', NULL, N'Nam', N'Đại úy', N'Phó Đại đội trưởng', 12, CAST(N'2006-06-17' AS Date), NULL, N'Vĩnh Long', N'Vĩnh Long', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
@@ -118,8 +118,8 @@ INSERT [dbo].[CanBo] ([HoTenKhaiSinh], [GioiTinh], [CapBac], [ChucVu], [MaDV], [
 (N'Vương Thị Hằng', N'Nữ', N'Đại úy', N'Nhân viên', 14, '1987-04-22', N'Đang công tác', '2024-01-01'),
 
 -- Ban Chỉ Huy (MaDV = 9)
-(N'Lương Văn Sơn', N'Nam', N'Trung tá', N'Trưởng phòng', 15, '1979-07-18', N'Đang công tác', '2024-01-01'),
-(N'Phạm Thị Xuân', N'Nữ', N'Thiếu tá', N'Phó Trưởng phòng', 15, '1984-09-12', N'Đang công tác', '2024-01-01');
+(N'Lương Văn Sơn', N'Nam', N'Trung tá', N'Trưởng phòng', 14, '1979-07-18', N'Đang công tác', '2024-01-01'),
+(N'Phạm Thị Xuân', N'Nữ', N'Thiếu tá', N'Phó Trưởng phòng', 14, '1984-09-12', N'Đang công tác', '2024-01-01');
 
 
 --thân nhân
